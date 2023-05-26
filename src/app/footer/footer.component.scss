@@ -1,0 +1,34 @@
+@import "../variables-and-mixins";
+
+.footer {
+    padding: $spacer-3 0;
+    background-color: $color-grey-1;
+    border-top: 1px solid $color-grey;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__icon-black {
+        width: 24px;
+        height: 24px;
+        fill: $color-black;
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: none;
+    }
+
+    &__icon-fill {
+        stroke: $color-black;
+        stroke-width: 2;
+        stroke-linecap: round;
+    }
+}

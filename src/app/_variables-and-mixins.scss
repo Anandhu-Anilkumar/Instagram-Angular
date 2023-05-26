@@ -1,0 +1,75 @@
+// breakpoints
+@mixin tablet {
+    @media (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1023.9px) {
+        @content;
+    }
+}
+
+// font variables
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+
+// layout variables
+$spacer-0: 0;
+$spacer-1: 0.25rem;
+$spacer-2: 0.5rem;
+$spacer-3: 1rem;
+$spacer-4: 1.5rem;
+$spacer-5: 2rem;
+$spacer-6: 2.5rem;
+
+// color variables
+$color-white: #fff;
+$color-black: #000;
+$color-red: #fe0135;
+$color-blue: #1fa1ff;
+$color-grey: #939393;
+$color-grey-1: #f5f5f5;
+
+// base style
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Open+Sans&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html,body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $font-regular;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: $color-black;
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 $spacer-3;
+}
+
+@include tablet {
+    
+    html,body {
+        font-size: 16px;
+    }
+}

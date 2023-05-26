@@ -1,0 +1,233 @@
+@import "../variables-and-mixins";
+
+.insta {
+    padding: $spacer-3 0;
+    margin-top: 65px;
+
+    &__post {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 $spacer-6 0;
+        position: relative;
+
+        &:last-child {
+            margin: 0
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 $spacer-2 0
+    }
+
+    &__author-content {
+        display: flex;
+        align-items: center;
+        gap: $spacer-2
+    }
+
+    &__image-container {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden
+    }
+
+    &__author-image {
+        height: 100%;
+        object-fit: cover
+    }
+
+    &__author-name {
+        font-weight: $font-bold
+    }
+
+    &__more {
+        width: 24px;
+        height: 24px
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        gap: $spacer-1;
+        padding: $spacer-2;
+        background-color: $color-white;
+        position: absolute;
+        top: $spacer-5;
+        right: $spacer-3
+    }
+
+    &__option {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: $spacer-2
+    }
+
+    &__copy-icon {
+        width: 20px;
+        height: 20px;
+        fill: none
+    }
+
+    &__share-icon {
+        width: 16px;
+        height: 16px;
+        fill: none
+    }
+
+    &__story-icon {
+        width: 18px;
+        height: 18px;
+        fill: none
+    }
+
+    &__option-icon-path {
+        stroke: $color-black;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round
+    }
+
+    &__learn-more {
+        background-color: $color-blue;
+        padding: $spacer-2 0
+    }
+
+    &__url {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    &__url-label {
+        color: $color-white;
+        font-weight: $font-bold
+    }
+
+    &__url-icon {
+        width: 4px;
+        height: 4px;
+        padding: $spacer-1;
+        border: solid $color-white;
+        border-width: 3px 3px 0 0;
+        transform: rotate(45deg)
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: $spacer-3 0 0 0
+    }
+
+    &__reaction {
+        display: flex;
+        align-items: center;
+        gap: $spacer-2
+    }
+
+    &__like {
+        width: 23px;
+        height: 20px;
+        cursor: pointer
+    }
+
+    &__like-path {
+        fill: none;
+        stroke: $color-black;
+        stroke-width: 1.4;
+
+        &--liked {
+            fill: $color-red;
+            stroke: $color-red
+        }
+    }
+
+    &__comment {
+        width: 23px;
+        height: 20px;
+        cursor: pointer
+    }
+
+    &__share {
+        fill: none;
+        width: 23px;
+        height: 20px;
+        margin: $spacer-1 0 0 0;
+        cursor: pointer
+    }
+
+    &__icon-path {
+        stroke: $color-black;
+        stroke-width: 1.8;
+        stroke-linejoin: round
+    }
+
+    &__count {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $color-blue
+    }
+
+    &__saved {
+        width: 85px;
+        text-align: right
+    }
+
+    &__bookmark {
+        width: 18px;
+        height: 22px;
+        cursor: pointer;
+        fill: none;
+
+        &--saved {
+            fill: $color-black
+        }
+    }
+
+    &__reach {
+        font-size: 0.9rem;
+        margin: $spacer-2 0
+    }
+
+    &__description {
+        margin: $spacer-2 0;
+        padding: 0 0 0 $spacer-2
+    }
+
+    &__show-more {
+        color: $color-grey
+    }
+
+    &__view-comments {
+        font-size: 0.9rem;
+        color: $color-grey;
+        display: block;
+        margin: $spacer-2 0
+    }
+
+    &__comments {
+        font-size: 0.875rem
+    }
+
+    &__comment-short {
+        padding: 0 0 0 $spacer-1
+    }
+
+    &__comment-more {
+        color: $color-grey
+    }
+}
+
+@include tablet {
+    .insta {
+        padding: $spacer-5 0
+    }
+}

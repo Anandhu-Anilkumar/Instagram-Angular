@@ -1,0 +1,42 @@
+@import "../variables-and-mixins";
+
+.header {
+    padding: $spacer-3 0;
+    background-color: $color-grey-1;
+    box-shadow: 2px 0 4px $color-black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: $spacer-2;
+    }
+
+    &__logo {
+        fill: $color-black;
+        width: 30px;
+        height: 30px;
+    }
+
+    &__name {
+        font-size: 1.5rem;
+        font-size: $font-bold;
+        font-family: 'Lobster Two', cursive;
+    }
+
+    &__icon {
+        fill: none;
+        width: 30px;
+        height: 30px;
+    }
+}
